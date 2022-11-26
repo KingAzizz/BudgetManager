@@ -1,26 +1,76 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+*{
   box-sizing: border-box;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.main{
+  margin-top: 150px;
+}
+
+.navbar{
+  background-color: #2AAA8A;
+  height: 91px;
+  padding: 10px;
+  text-align: center;
+}
+
+.wallet-container{
+  display: flex;
+  justify-content: center;
+}
+.box{
+  background-color: #2AAA8A;
+  border-radius: 5px;
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 123px;
+  font-size: 36px;
+  position: relative;
+
+}
+
+
+.wallet-buttons{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.wallet-buttons > button{
+  background-color: #D1F4EB;
+  width: 164px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  color: #208D72;
+  font-size: 24px;
+  cursor: pointer;
+  transition: .3s;
+}
+.wallet-buttons > button:hover{
+  background-color: #208D72;
+
+  color: #ffff;
+ 
+}
+
+
+.spendingBox{
+  width: 188px;
+  height: 109px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #D1F4EB;
+  color: #208D72;
+  font-size: 32px;
+  border-radius: 5px;
+  position: relative;
 }
