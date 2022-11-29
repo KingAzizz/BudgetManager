@@ -59,6 +59,15 @@
   color: #ffff;
  
 }
+.icon-same-position{
+  position:absolute;
+  right:85;
+}
+.icon-different-position{
+  position:absolute;
+  right:15;
+  margin-top:8px
+}
 
 
 .spendingBox{
@@ -108,11 +117,6 @@ border: 1px solid #208D72;
 
 }
 
-
-
-
-
-/* CSS */
 .button-33 {
   margin-top: 5px;
   background-color: #c2fbd7;
@@ -136,4 +140,153 @@ border: 1px solid #208D72;
 .button-33:hover {
   box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
+}
+
+
+.spendingTrackerContainer{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.spendingWrapper{
+  
+ width: clamp(300px,70%,983px);
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header{
+  width: 100%;
+  background-color: #2AAA8A;
+  color: #ffffff;
+  font-size: 32px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.card-wrapper{
+  overflow-y: auto;
+  width: clamp(300px,70%,983px);
+  height: 413px;
+  border: 1px solid #2AAA8A;
+  border-radius: 5px;
+}
+.card{
+  display: flex;
+  justify-content: space-between ;
+  width: 100%;
+  background-color: #D1F4EB;
+  border: 1px solid #2AAA8A;
+  font-size: 1.6rem;
+  padding: 10px;
+  color: #208D72;
+}
+
+.spendingInputs{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+
+  padding: 20px;
+}
+
+
+.spendingInputsWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spendingInputsWrapper > button{
+  background-color: #2AAA8A;
+  border: 1px solid #D1F4EB;
+  color: #D1F4EB;
+  width: 170px;
+  height: 70px;
+  position: relative;
+ 
+}
+.spendingInputsWrapper > input{
+  background-color: #2AAA8A;
+  border: 1px solid #D1F4EB;
+  color: #ffffff;
+  text-align: center;
+  width: 170px;
+  height: 70px;
+}
+.spendingInputsWrapper > input::placeholder{
+  
+  color: #ffffff;
+  text-align: center;
+}
+.subMenu{
+  list-style-type: none;
+  background-color: #D1F4EB;
+  color:#208D72;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  
+}
+
+.menuItem{
+  background-color: #D1F4EB;
+ cursor: pointer;
+  padding: 10px;
+ 
+  list-style-type: none;
+}
+.menuItem:hover{
+  color:#2AAA8A ;
+  background-color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  
+  .wallet-container{
+
+    flex-direction: column;
+    align-items: center;
+  }
+  .spendingBox{
+    margin: 20px;
+   }
+   .spendingInputsWrapper{
+    
+    flex-direction: column;
+    
+  }
+}
+@media only screen and (max-width: 500px) {
+  
+ .card{
+  flex-direction: column;
+  padding: 30px;
+ }
+
+ 
+ .icon-same-position{
+  position: relative;
+ }
+ .icon-different-position{
+  position: relative;
+ }
+ .header{
+  font-size: 23px;
+ }
+ .spendingInputs{
+  padding: 10px;
+ }
+ .wallet-buttons > button{
+  padding: 10px;
+ }
 }
