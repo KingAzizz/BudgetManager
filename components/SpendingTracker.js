@@ -34,14 +34,14 @@ const SpendingTracker = () => {
           <h3>{dayName}</h3>
         </div>
         <div className="card-wrapper">
-          {historySpending.sort((a,b) => {
+          {historySpending !== null ? historySpending.sort((a,b) => {
              return new Date(b.date) - new Date(a.date)
           }).map(item => 
           <div className="card">
             <h3>{item.type}</h3>
             <h3>{item.date}</h3>
             <h3>${item.amountSpend}</h3>
-          </div>)}
+          </div>) : <h2 style={{textAlign:'center'}}>Track your expenses ...</h2>}
           
         </div>
         <div className="spendingInputs">
@@ -80,7 +80,7 @@ const SpendingTracker = () => {
               </SubMenu>
             </Menu>
             <input type="date" onChange={(e) => setDate(e.target.value)} value={date} placeholder="Enter Date"/>
-            <input type="number" onChange={(e) => setCurrentSpend(e.target.value)} value={currentSpend} placeholder="Enter What You Spend" />
+            <input type="number" onChange={(e) => setCurrentSpend(e.target.value)}  placeholder="Enter What You Spend" />
             <button onClick={() => addSpending(currentSpend,date,typeOfSpending,setDate,setCurrentSpend,setTypeOfSpending)}>
               <GrAdd
                 size="60px"
