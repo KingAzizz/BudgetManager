@@ -45,7 +45,9 @@ export const StateContext = ({children}) => {
             toast.error("Fields are empty")
 
         }else{
-
+            if(balance <= 0){
+                toast("Balance is Below 0, Collecting Debt")
+            }
             setBalance((prevAmount) => prevAmount - parseFloat(amountSpend))
             localStorage.setItem("balance",balance - parseFloat(amountSpend))
             setSpending((prev) => prev + parseFloat(amountSpend))
