@@ -20,7 +20,7 @@ const AddBalanceSavings = ({type,currentAmount,hideAdd}) => {
         <h3>{currentAmount}</h3>
         </div>
         <input className='addInput' placeholder='how much you want to add' type={"number"} onChange={(e) => setAmount(e.target.value)}/>
-        <button className="button-33" role="button" onClick={() => addBalanceSavingsAmount(type,parseFloat(amount))}>Add {type}</button>
+        <button className="button-33" role="button" onClick={() => addBalanceSavingsAmount(type,parseFloat(amount),hideAdd)}>Add {type}</button>
 
 
     </div>
