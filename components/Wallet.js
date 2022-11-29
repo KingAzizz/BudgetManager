@@ -20,7 +20,7 @@ const Wallet = () => {
         <div>
             <div className='box'>
                 <h3>Savings</h3>
-                <p>{saving} <span style={{position:'absolute',right:85}}><BsPiggyBank /></span></p>
+                <p>{saving} <span className='icon-same-position'><BsPiggyBank /></span></p>
             </div>
             <div className='wallet-buttons'>
                 <button type='button' onClick={() =>setShowAddSaving(true)}>Add Saving</button>
@@ -29,12 +29,12 @@ const Wallet = () => {
         </div>
         <div className='spendingBox'>
             <h3>Spending</h3>
-            <p>{spending} <span style={{position:'absolute',right:15,marginTop:'8px'}}><GiPayMoney /></span></p>
+            <p>{spending} <span className='icon-different-position'><GiPayMoney /></span></p>
         </div>
         <div>
         <div className='box'>
                 <h3>Balance </h3>
-                <p>{balance} <span style={{position:'absolute',right:85}}><GiReceiveMoney /></span></p>
+                <p>{balance} <span className='icon-same-position'><GiReceiveMoney /></span></p>
             </div>
             <div className='wallet-buttons'>
                 <button type='button' onClick={() => setShowAddBalance(true)}>Add Balance</button>
