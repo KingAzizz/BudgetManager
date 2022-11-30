@@ -8,7 +8,7 @@ const Navbar = () => {
             <title>Budget Manager</title>
             <link rel="icon" type="image/x-icon" href="/logoColor.png" />
             </Head>
-        <Image src="/logo.png" width={102} height={70}/>
+        <Image src="/logo.png" width={102} height={70} alt="logo image"/>
     </nav>
   )
 }
