@@ -4,7 +4,9 @@ import { Menu, MenuItem, MenuButton, SubMenu } from "@szhsin/react-menu";
 import { useStateContext } from '../Context/StateContext'
 
 const SpendingTracker = () => {
-  const [date,setDate] = useState(null)
+  let currentDate = new Date().toJSON().slice(0, 10);
+
+  const [date,setDate] = useState(currentDate)
   const [typeOfSpending,setTypeOfSpending] = useState("")
   const [currentSpend,setCurrentSpend] = useState(0)
 
@@ -36,8 +38,8 @@ const SpendingTracker = () => {
         <div className="card-wrapper">
           {historySpending !== null ? historySpending.sort((a,b) => {
              return new Date(b.date) - new Date(a.date)
-          }).map(item => 
-          <div className="card">
+          }).map((item,indx) =>
+          <div className="card" key={indx}>
             <h3>{item.type}</h3>
             <h3>{item.date}</h3>
             <h3>${item.amountSpend}</h3>
@@ -79,8 +81,9 @@ const SpendingTracker = () => {
                 <MenuItem className="menuItem" value="Car/Other">Other</MenuItem>
               </SubMenu>
             </Menu>
-            <input type="date" onChange={(e) => setDate(e.target.value)} value={date} placeholder="Enter Date"/>
-            <input type="number" onChange={(e) => setCurrentSpend(e.target.value)}  placeholder="Enter What You Spend" />
+           
+            <input type="date" onChange={(e) => setDate(e.target.value)} value={date}  />
+            <input type="number" onChange={(e) => setCurrentSpend(e.target.value)}  placeholder="Enter Expenses" />
             <button onClick={() => addSpending(currentSpend,date,typeOfSpending,setDate,setCurrentSpend,setTypeOfSpending)}>
               <GrAdd
                 size="60px"
