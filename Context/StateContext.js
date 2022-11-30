@@ -55,7 +55,9 @@ export const StateContext = ({children}) => {
             let spendDetails ={
                 type:type,
                 date:date,
-                amountSpend:amountSpend
+                amountSpend:amountSpend,
+                balanceBefore:balance,
+                currentSaving:saving
             }
           
             if(localStorage.getItem("spendDetails") !== null){
