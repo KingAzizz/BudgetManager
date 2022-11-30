@@ -7,7 +7,7 @@
 }
 
 .main{
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .navbar{
@@ -213,6 +213,7 @@ border: 1px solid #208D72;
   width: 170px;
   height: 70px;
   position: relative;
+  font-size: 1.3rem;
  
 }
 .spendingInputsWrapper > input{
@@ -222,6 +223,7 @@ border: 1px solid #208D72;
   text-align: center;
   width: 170px;
   height: 70px;
+  font-size: 1.1rem;
 }
 .spendingInputsWrapper > input::placeholder{
   
@@ -235,7 +237,7 @@ border: 1px solid #208D72;
   padding: 10px;
   font-size: 1.5rem;
   cursor: pointer;
-  
+  z-index: 999999;
 }
 
 .menuItem{
@@ -249,6 +251,10 @@ border: 1px solid #208D72;
   color:#2AAA8A ;
   background-color: white;
 }
+
+
+
+
 
 @media only screen and (max-width: 800px) {
   
@@ -266,6 +272,15 @@ border: 1px solid #208D72;
     
   }
 }
+.chartContainer{
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
+}
+
+
 @media only screen and (max-width: 500px) {
   
  .card{
@@ -281,7 +296,7 @@ border: 1px solid #208D72;
   position: relative;
  }
  .header{
-  font-size: 23px;
+  font-size: 18px;
  }
  .spendingInputs{
   padding: 10px;
